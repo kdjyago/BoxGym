@@ -1,7 +1,7 @@
 # BoxGym
 
 > **Warning**
-> Link Github Pages: 
+> Link Github Pages: https://kdjyago.github.io/BoxGym/
 
 ## App de boxeo
 
