@@ -1,0 +1,6 @@
+theme: jekyll-theme-cayman
+title: BoxGym
+description: Esto es BoxGym
+
+plugins:
+  - jekyll-seo-tag
