@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>775132262195-7l2peluf66h405kqjc99ipc2ffkonqlo.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.775132262195-7l2peluf66h405kqjc99ipc2ffkonqlo</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>775132262195-0tjbplif3cpa6uuvtck01s45cvgfpo56.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCuO760-gdeMlnXizQC-IOOTgFm8YNUAOQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>775132262195</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mycompany.boxgym</string>
+	<key>PROJECT_ID</key>
+	<string>boxgym1-15b36</string>
+	<key>STORAGE_BUCKET</key>
+	<string>boxgym1-15b36.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:775132262195:ios:2839691564d445614d1846</string>
+</dict>
+</plist>
