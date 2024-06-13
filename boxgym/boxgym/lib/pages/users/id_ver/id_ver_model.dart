@@ -7,7 +7,7 @@ class IdVerModel extends FlutterFlowModel<IdVerWidget> {
 
   bool escaneado = false;
 
-  String? idEscaneado;
+  String idEscaneado = 'vacio';
 
   ///  State fields for stateful widgets in this page.
 

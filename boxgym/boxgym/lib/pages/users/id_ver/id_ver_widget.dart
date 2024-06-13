@@ -3,10 +3,12 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/widgets/no_detectado/no_detectado_widget.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:webviewx_plus/webviewx_plus.dart';
 import 'id_ver_model.dart';
 export 'id_ver_model.dart';
 
@@ -410,65 +412,113 @@ class _IdVerWidgetState extends State<IdVerWidget> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              _model.idUser =
-                                  await FlutterBarcodeScanner.scanBarcode(
-                                '#C62828', // scanning line color
-                                FFLocalizations.of(context).getText(
-                                  'mndqu4n8' /* Cancel */,
-                                ), // cancel button text
-                                true, // whether to show the flash icon
-                                ScanMode.QR,
-                              );
+                          Builder(
+                            builder: (context) => InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                var shouldSetState = false;
+                                _model.idUser =
+                                    await FlutterBarcodeScanner.scanBarcode(
+                                  '#C62828', // scanning line color
+                                  FFLocalizations.of(context).getText(
+                                    'mndqu4n8' /* Cancel */,
+                                  ), // cancel button text
+                                  true, // whether to show the flash icon
+                                  ScanMode.QR,
+                                );
 
-                              _model.idEscaneado = _model.idUser;
-                              setState(() {});
-                              await Future.delayed(
-                                  const Duration(milliseconds: 100));
-                              _model.escaneado = true;
-                              setState(() {});
-
-                              setState(() {});
-                            },
-                            child: Container(
-                              width: MediaQuery.sizeOf(context).width * 0.7,
-                              decoration: BoxDecoration(
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(6.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      Icons.qr_code,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondary,
-                                      size: 30.0,
-                                    ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'mc8ipumh' /* Escanea */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBackground,
-                                            fontSize: 30.0,
-                                            letterSpacing: 0.0,
+                                shouldSetState = true;
+                                _model.idEscaneado = _model.idUser;
+                                setState(() {});
+                                await Future.delayed(
+                                    const Duration(milliseconds: 100));
+                                if ((_model.idEscaneado == 'vacio') ||
+                                    (_model.idEscaneado == '-1')) {
+                                  await showDialog(
+                                    context: context,
+                                    builder: (dialogContext) {
+                                      return Dialog(
+                                        elevation: 0,
+                                        insetPadding: EdgeInsets.zero,
+                                        backgroundColor: Colors.transparent,
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                        child: WebViewAware(
+                                          child: GestureDetector(
+                                            onTap: () => _model
+                                                    .unfocusNode.canRequestFocus
+                                                ? FocusScope.of(context)
+                                                    .requestFocus(
+                                                        _model.unfocusNode)
+                                                : FocusScope.of(context)
+                                                    .unfocus(),
+                                            child: SizedBox(
+                                              height: MediaQuery.sizeOf(context)
+                                                      .height *
+                                                  0.4,
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  0.8,
+                                              child: const NoDetectadoWidget(),
+                                            ),
                                           ),
-                                    ),
-                                  ],
+                                        ),
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
+
+                                  if (shouldSetState) setState(() {});
+                                  return;
+                                } else {
+                                  _model.escaneado = true;
+                                  setState(() {});
+                                  if (shouldSetState) setState(() {});
+                                  return;
+                                }
+
+                                if (shouldSetState) setState(() {});
+                              },
+                              child: Container(
+                                width: MediaQuery.sizeOf(context).width * 0.7,
+                                decoration: BoxDecoration(
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(6.0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.qr_code,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondary,
+                                        size: 30.0,
+                                      ),
+                                      Text(
+                                        FFLocalizations.of(context).getText(
+                                          'mc8ipumh' /* Escanea */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryBackground,
+                                              fontSize: 30.0,
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -703,7 +753,7 @@ class _IdVerWidgetState extends State<IdVerWidget> {
                                         onPressed: () async {
                                           _model.escaneado = false;
                                           setState(() {});
-                                          _model.idEscaneado = null;
+                                          _model.idEscaneado = 'vacio';
                                           setState(() {});
                                         },
                                         text:

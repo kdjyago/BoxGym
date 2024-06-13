@@ -2137,6 +2137,36 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'zh_Hans': '',
     },
   },
+  // noDetectado
+  {
+    '297xzn74': {
+      'es': 'ALERTA',
+      'de': '',
+      'en': '',
+      'fr': '',
+      'pt': '',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'ced8xwj8': {
+      'es': '¡ID NO DETECTADO!',
+      'de': '',
+      'en': '',
+      'fr': '',
+      'pt': '',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'uclgt6m1': {
+      'es': 'ENTENDIDO',
+      'de': '',
+      'en': '',
+      'fr': '',
+      'pt': '',
+      'ru': '',
+      'zh_Hans': '',
+    },
+  },
   // Miscellaneous
   {
     'k5glmoqj': {
