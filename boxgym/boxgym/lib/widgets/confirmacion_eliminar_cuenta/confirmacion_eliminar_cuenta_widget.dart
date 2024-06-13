@@ -144,7 +144,7 @@ class _ConfirmacionEliminarCuentaWidgetState
                   onPressed: () async {
                     await authManager.deleteUser(context);
 
-                    context.pushNamed('Login');
+                    context.goNamed('Login');
                   },
                   text: FFLocalizations.of(context).getText(
                     '4n5i7df0' /* SI */,

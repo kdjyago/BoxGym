@@ -716,7 +716,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // idVer
   {
-    'gciznktb': {
+    'bhmbptr2': {
       'es': '¡Aquí tienes tu tarjeta de identificación!',
       'de': '',
       'en': '',
@@ -725,7 +725,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': '',
       'zh_Hans': '',
     },
-    '2koi62he': {
+    'aqxzezdv': {
       'es': 'Reversa',
       'de': '',
       'en': '',
@@ -734,7 +734,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': '',
       'zh_Hans': '',
     },
-    'bmglp57l': {
+    'mc8ipumh': {
       'es': 'Escanea',
       'de': '',
       'en': '',
@@ -743,8 +743,35 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ru': '',
       'zh_Hans': '',
     },
-    'wsw5013y': {
+    'mndqu4n8': {
       'es': 'Cancel',
+      'de': '',
+      'en': '',
+      'fr': '',
+      'pt': '',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    '79n0ns93': {
+      'es': '¡Perfil Encontrado!',
+      'de': '',
+      'en': '',
+      'fr': '',
+      'pt': '',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'bsd7sghz': {
+      'es': 'Puntuación',
+      'de': '',
+      'en': '',
+      'fr': '',
+      'pt': '',
+      'ru': '',
+      'zh_Hans': '',
+    },
+    'bnlthtqx': {
+      'es': 'Cerrar',
       'de': '',
       'en': '',
       'fr': '',

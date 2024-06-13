@@ -39,26 +39,26 @@ class FFAppState extends ChangeNotifier {
   }
 
   void addToEntrenoNuevo(String value) {
-    _entrenoNuevo.add(value);
+    entrenoNuevo.add(value);
   }
 
   void removeFromEntrenoNuevo(String value) {
-    _entrenoNuevo.remove(value);
+    entrenoNuevo.remove(value);
   }
 
   void removeAtIndexFromEntrenoNuevo(int index) {
-    _entrenoNuevo.removeAt(index);
+    entrenoNuevo.removeAt(index);
   }
 
   void updateEntrenoNuevoAtIndex(
     int index,
     String Function(String) updateFn,
   ) {
-    _entrenoNuevo[index] = updateFn(_entrenoNuevo[index]);
+    entrenoNuevo[index] = updateFn(_entrenoNuevo[index]);
   }
 
   void insertAtIndexInEntrenoNuevo(int index, String value) {
-    _entrenoNuevo.insert(index, value);
+    entrenoNuevo.insert(index, value);
   }
 
   bool _esAdmin = false;
