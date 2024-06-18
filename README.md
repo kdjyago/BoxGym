@@ -7,6 +7,7 @@
 
 La aplicación desarrollada en este proyecto, llamada BoxGym, es una herramienta para la programación y seguimiento de entrenamientos de boxeo, con un sistema de recompensas que permite a los usuarios canjear puntos por personalizaciones. La aplicación ha sido desarrollada utilizando Flutterflow y el lenguaje Dart.
 
+## APK
 ![](media/apk.png) 
 
 
